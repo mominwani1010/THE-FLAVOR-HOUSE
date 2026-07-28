@@ -353,4 +353,41 @@ body{
     color:#cfcfcf;
     padding:0 20px 30px;
     line-height:1.7;
+}/* Reviews */
+
+.reviews{
+    padding:100px 8%;
+}
+
+.review-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.review-card{
+    background:#181818;
+    padding:30px;
+    border-radius:20px;
+    transition:.3s;
+}
+
+.review-card:hover{
+    transform:translateY(-10px);
+}
+
+.stars{
+    color:#D4AF37;
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+.review-card p{
+    color:#cfcfcf;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.review-card h4{
+    color:#fff;
 }
