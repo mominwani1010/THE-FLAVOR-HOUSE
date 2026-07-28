@@ -32,4 +32,14 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
             });
         }
     });
+});const orderBtn = document.getElementById("orderBtn");
+
+if(orderBtn){
+
+orderBtn.addEventListener("click",()=>{
+
+window.open("https://wa.me/916005640160","_blank");
+
 });
+
+}
