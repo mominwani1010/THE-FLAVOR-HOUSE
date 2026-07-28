@@ -390,4 +390,35 @@ body{
 
 .review-card h4{
     color:#fff;
+}/* Order Section */
+
+.order{
+    padding:100px 8%;
+}
+
+.order-form{
+    max-width:700px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.order-form input,
+.order-form textarea{
+    padding:18px;
+    background:#181818;
+    border:1px solid #333;
+    border-radius:12px;
+    color:#fff;
+    font-size:16px;
+}
+
+.order-form textarea{
+    resize:none;
+}
+
+.order-form button{
+    border:none;
+    cursor:pointer;
 }
