@@ -1,1 +1,362 @@
 
+/* Vintage Premium Theme Setup */
+:root {
+  --bg-color: #111111;
+  --text-color: #fdf5e6; /* Old Lace / Cream */
+  --accent-gold: #d4af37;
+  --dark-gold: #aa8c2c;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Lato', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(17, 17, 17, 0.95);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: var(--accent-gold);
+  letter-spacing: 2px;
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--accent-gold);
+}
+
+.cart-btn {
+  background: transparent;
+  border: 1px solid var(--accent-gold);
+  color: var(--accent-gold);
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.cart-btn:hover {
+  background: var(--accent-gold);
+  color: #000;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: radial-gradient(circle, rgba(40,40,40,1) 0%, rgba(17,17,17,1) 100%);
+}
+
+.vintage-text {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  color: var(--accent-gold);
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+.cta-btn {
+  background: var(--accent-gold);
+  color: #000;
+  padding: 12px 30px;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 2px;
+  font-weight: bold;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.cta-btn:hover {
+  transform: scale(1.05);
+  background: var(--dark-gold);
+}
+
+.cta-btn.secondary {
+  background: transparent;
+  border: 1px solid var(--accent-gold);
+  color: var(--accent-gold);
+}
+.cta-btn.secondary:hover {
+  background: var(--accent-gold);
+  color: #000;
+}
+
+/* Titles */
+.vintage-title {
+  font-family: var(--font-heading);
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--accent-gold);
+  margin-bottom: 40px;
+  padding-top: 40px;
+}
+
+/* Gallery Marquee Auto-Swipe */
+.gallery-section {
+  padding: 40px 0;
+  background-color: #0a0a0a;
+}
+
+.marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  position: relative;
+}
+
+.marquee-track {
+  display: inline-flex;
+  animation: scroll-left 30s linear infinite;
+}
+
+.marquee-track img {
+  height: 300px;
+  width: 400px;
+  object-fit: cover;
+  margin-right: 15px;
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  border-radius: 8px;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Dishes Grid */
+.menu-highlights, .full-menu-section {
+  padding: 60px 5%;
+}
+
+.dish-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.dish-card {
+  background: #1a1a1a;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.dish-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent-gold);
+}
+
+.dish-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.dish-card h3 {
+  font-family: var(--font-heading);
+  color: var(--accent-gold);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.dish-card p {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.dish-card button {
+  width: 100%;
+  padding: 10px;
+  background: var(--accent-gold);
+  color: #000;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.dish-card button:hover {
+  background: var(--dark-gold);
+}
+
+.center-btn-wrapper {
+  text-align: center;
+}
+
+/* Cart Modal */
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  backdrop-filter: blur(5px);
+}
+
+.cart-box {
+  background: #1a1a1a;
+  border: 2px solid var(--accent-gold);
+  width: 90%;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 8px;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.close-cart {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  color: var(--accent-gold);
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#cart-items {
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+  padding-bottom: 10px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.cart-total {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent-gold);
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.checkout-form input, .checkout-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  background: #111;
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  color: #fff;
+  border-radius: 4px;
+  font-family: var(--font-body);
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 15px;
+  background: #25D366; /* WhatsApp Green */
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.checkout-btn:hover {
+  background: #1da851;
+}
+
+/* Footer */
+footer {
+  background: #0a0a0a;
+  border-top: 1px solid rgba(212, 175, 55, 0.3);
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 50px;
+}
+
+footer h2 {
+  font-family: var(--font-heading);
+  color: var(--accent-gold);
+  margin-bottom: 10px;
+}
+
+footer p {
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.chefs {
+  margin: 20px 0;
+}
+
+.chefs img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-gold);
+  margin: 0 10px;
+  object-fit: cover;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  margin-top: 20px;
+}
