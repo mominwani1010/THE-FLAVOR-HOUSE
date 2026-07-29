@@ -1,0 +1,467 @@
+/* Google Font */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#111;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+/* Loader */
+
+#loader{
+    position:fixed;
+    inset:0;
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    transition:.5s;
+}
+
+#loader h1{
+    color:#ff9800;
+    letter-spacing:3px;
+    font-size:2.5rem;
+}
+
+/* Navbar */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:rgba(0,0,0,.45);
+    backdrop-filter:blur(15px);
+    z-index:1000;
+}
+
+.logo{
+    font-size:1.8rem;
+    font-weight:700;
+    color:#ff9800;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    color:#fff;
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#ff9800;
+}
+
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.cart-btn{
+    position:relative;
+    cursor:pointer;
+    font-size:24px;
+}
+
+#cart-count{
+    position:absolute;
+    top:-8px;
+    right:-10px;
+    background:red;
+    color:#fff;
+    border-radius:50%;
+    width:20px;
+    height:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:12px;
+}
+
+/* Hero */
+
+.hero{
+    position:relative;
+    height:100vh;
+    overflow:hidden;
+}
+
+.hero-slider{
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0;
+    transition:1s;
+}
+
+.slide.active{
+    opacity:1;
+}
+
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.55);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:4rem;
+    color:#fff;
+}
+
+.hero-content h3{
+    color:#ff9800;
+    font-size:1.4rem;
+}
+
+.hero-content p{
+    margin:20px 0;
+    font-size:1.1rem;
+}
+
+.hero-btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:#ff9800;
+    color:#fff;
+    border-radius:40px;
+    transition:.4s;
+    font-weight:600;
+}
+
+.hero-btn:hover{
+    background:#fff;
+    color:#111;
+    transform:translateY(-5px);
+}
+
+/* Section */
+
+section{
+    padding:90px 8%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.title h2{
+    font-size:2.7rem;
+    color:#ff9800;
+}
+
+.title p{
+    color:#ccc;
+    margin-top:10px;
+}
+
+/* Food Cards */
+
+.food-slider,
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.food-card{
+    background:#1b1b1b;
+    border-radius:18px;
+    overflow:hidden;
+    transition:.4s;
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+}
+
+.food-card:hover{
+    transform:translateY(-10px);
+}
+
+.food-card img{
+    height:220px;
+    object-fit:cover;
+}
+
+.food-card h3{
+    padding:15px;
+}
+
+.food-card p{
+    padding:0 15px;
+    color:#bbb;
+}
+
+.price{
+    color:#ff9800;
+    font-size:1.3rem;
+    font-weight:bold;
+    padding:15px;
+}
+
+.food-card button{
+    margin:15px;
+    width:calc(100% - 30px);
+    padding:12px;
+    border:none;
+    background:#ff9800;
+    color:#fff;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.food-card button:hover{
+    background:#e68900;
+}
+
+.menu-button{
+    text-align:center;
+    margin-top:50px;
+}/* WHY CHOOSE US */
+
+.why-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+}
+
+.why-card{
+background:#1b1b1b;
+padding:35px;
+border-radius:18px;
+text-align:center;
+transition:.4s;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+.why-card:hover{
+transform:translateY(-10px);
+background:#ff9800;
+color:#fff;
+}
+
+.why-card h3{
+margin-bottom:15px;
+font-size:1.4rem;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+}
+
+.gallery img{
+height:260px;
+object-fit:cover;
+border-radius:18px;
+transition:.5s;
+cursor:pointer;
+}
+
+.gallery img:hover{
+transform:scale(1.08);
+box-shadow:0 15px 35px rgba(255,152,0,.5);
+}
+
+/* CHEFS */
+
+.chef-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.chef-card{
+background:#1b1b1b;
+padding:20px;
+border-radius:18px;
+text-align:center;
+transition:.4s;
+}
+
+.chef-card:hover{
+transform:translateY(-10px);
+}
+
+.chef-card img{
+height:340px;
+object-fit:cover;
+border-radius:15px;
+margin-bottom:20px;
+}
+
+.chef-card h3{
+color:#ff9800;
+margin-bottom:10px;
+}
+
+/* CART */
+
+.cart-panel{
+position:fixed;
+right:-420px;
+top:0;
+width:380px;
+height:100%;
+background:#fff;
+color:#111;
+padding:25px;
+transition:.5s;
+overflow-y:auto;
+z-index:2000;
+box-shadow:-10px 0 30px rgba(0,0,0,.3);
+}
+
+.cart-panel.active{
+right:0;
+}
+
+.cart-panel h2{
+margin-bottom:20px;
+}
+
+#cart-items div{
+display:flex;
+justify-content:space-between;
+margin:12px 0;
+padding-bottom:12px;
+border-bottom:1px solid #ddd;
+}
+
+#checkout{
+width:100%;
+padding:15px;
+margin-top:20px;
+background:#25D366;
+color:#fff;
+border:none;
+border-radius:10px;
+font-size:17px;
+cursor:pointer;
+font-weight:600;
+}
+
+/* FOOTER */
+
+footer{
+background:#000;
+padding:50px 20px;
+text-align:center;
+}
+
+footer h2{
+color:#ff9800;
+margin-bottom:20px;
+}
+
+footer p{
+margin:10px 0;
+color:#ccc;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.nav-links{
+position:absolute;
+top:80px;
+left:-100%;
+width:100%;
+background:#111;
+flex-direction:column;
+padding:30px;
+transition:.4s;
+}
+
+.nav-links.active{
+left:0;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.hero-content h1{
+font-size:2.6rem;
+}
+
+.hero-content p{
+font-size:1rem;
+}
+
+.cart-panel{
+width:100%;
+}
+
+.title h2{
+font-size:2rem;
+}
+
+.food-card img{
+height:200px;
+}
+
+.gallery img{
+height:220px;
+}
+
+.chef-card img{
+height:260px;
+}
+
+}
