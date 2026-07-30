@@ -1,0 +1,68 @@
+/* ============================================================
+   THE FLAVOR HOUSE — menu.css (menu.html page-specific)
+   Loaded after style.css — only overrides / adds menu-page styles
+   ============================================================ */
+
+/* ============ MENU HERO BANNER ============ */
+.menu-hero{
+  position: relative; height: 52svh; min-height: 340px;
+  display: flex; align-items: center; justify-content: center; overflow: hidden;
+  margin-top: 0;
+}
+.menu-hero-bg{
+  position: absolute; inset: 0; background-size: cover; background-position: center;
+  transform: scale(1.08);
+}
+.menu-hero-overlay{
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(21,16,12,0.78) 0%, rgba(21,16,12,0.55) 45%, rgba(21,16,12,0.92) 100%);
+}
+.menu-hero-content{ position: relative; z-index: 2; text-align: center; max-width: 640px; padding: 0 1.4rem; }
+.crumb{ font-size: 0.85rem; color: var(--muted); letter-spacing: 0.05em; margin-bottom: 0.8rem; }
+.crumb a{ color: var(--gold-light); }
+.crumb a:hover{ text-decoration: underline; }
+.menu-hero-content h1{
+  font-size: clamp(2.2rem, 6vw, 3.6rem); font-weight: 600; color: var(--cream); margin-bottom: 0.7rem;
+}
+.menu-hero-content p{ color: var(--muted); font-style: italic; font-size: 1rem; }
+
+/* ============ MENU GRID ============ */
+.menu-section{ padding-top: 6rem; }
+.menu-grid{
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem;
+}
+.menu-item{
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  overflow: hidden; transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+.menu-item:hover{ transform: translateY(-6px); box-shadow: 0 20px 38px rgba(0,0,0,0.4); }
+.menu-item img{ width: 100%; aspect-ratio: 4/3; object-fit: cover; transition: transform 0.6s var(--ease); }
+.menu-item:hover img{ transform: scale(1.08); }
+.menu-item-body{ padding: 1.3rem 1.4rem 1.5rem; }
+.menu-item-row{ display: flex; justify-content: space-between; align-items: center; gap: 0.6rem; }
+.menu-item-row h3{ font-size: 1.1rem; font-weight: 500; }
+.menu-item-body p{ color: var(--muted); font-size: 0.86rem; margin: 0.6rem 0 1.2rem; }
+
+.menu-item-actions{ display: flex; align-items: center; gap: 0.8rem; }
+.qty-stepper{
+  display: flex; align-items: center; gap: 0.6rem;
+  border: 1px solid var(--line); border-radius: 999px; padding: 0.35rem 0.7rem; flex-shrink: 0;
+}
+.qty-btn{
+  width: 22px; height: 22px; border-radius: 50%; border: none; background: none; color: var(--cream);
+  font-size: 1rem; display: flex; align-items: center; justify-content: center;
+}
+.qty-btn:hover{ color: var(--gold); }
+.qty-val{ min-width: 16px; text-align: center; font-size: 0.9rem; }
+.menu-item-actions .btn-add{ flex: 1; }
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 980px){
+  .menu-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 620px){
+  .menu-grid{ grid-template-columns: 1fr; }
+  .menu-item-actions{ flex-direction: column; align-items: stretch; }
+  .qty-stepper{ justify-content: center; }
+}
