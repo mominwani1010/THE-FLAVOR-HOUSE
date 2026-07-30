@@ -369,7 +369,10 @@ document.addEventListener('DOMContentLoaded', () => {
       msg += `Phone: ${phone}\n`;
       msg += `Address: ${address}\n\n`;
       msg += `Order:\n`;
-      cart.forEach(item => { msg += `${item.name} ×${item.qty}\n`; });
+      cart.forEach(item => {
+    const subtotal = item.price * item.qty;
+    msg += `${item.name} x${item.qty} @ ₹${item.price} = ₹${subtotal}\n`;
+});
       msg += `\nTotal ₹${cartTotal(cart)}\n`;
       msg += `\nSpecial Instructions: ${notes ? notes : 'None'}`;
 
